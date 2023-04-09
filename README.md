@@ -1,3 +1,9 @@
+> Ce projet vient tout juste de commencer et je n'ai pas encore eu le temps de le poursuivre. Il s'agit d'un projet visant à aider El Anis à préparer son brevet. El Anis est un jeune que j'accompagne bénévolement dans le cadre de l'association [Entraide Scolaire Amicale](https://www.entraidescolaireamicale.org/) (ESA). 
+
+> L'ESA a pour mission d'accompagner les enfants en difficulté scolaire lorsque leur famille ne peut pas les aider ou les faire aider. L'antenne nantaise accompagne les enfants de l'agglomération nantaise. En tant que bénévole, je suis mentor pour un élève de 3ème que je rencontre une fois par semaine pendant au moins une heure. L'objectif est de mettre l'élève en confiance, de travailler sur ses difficultés et ses lacunes, mais aussi de faire le lien avec les parents et l'école.
+
+> Pour en savoir plus : https://marie-gautrons-marvelous-site.webflow.io/project/projet-de-soutien-scolaire-benevole-pour-el-anis
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

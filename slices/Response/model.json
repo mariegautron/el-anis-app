@@ -11,14 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Response",
       "primary": {
-        "title": {
-          "type": "StructuredText",
-          "config": {
-            "single": "heading1",
-            "label": "Title",
-            "placeholder": "This is where it all begins..."
-          }
-        },
         "description": {
           "type": "StructuredText",
           "config": {
@@ -34,6 +26,22 @@
             "default_value": false,
             "placeholder_true": "true",
             "placeholder_false": "false"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "value": {
+          "type": "Text",
+          "config": {
+            "label": "value",
+            "placeholder": ""
           }
         }
       },

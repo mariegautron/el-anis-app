@@ -1,5 +1,5 @@
-import React from "react";
 import { PrismicRichText } from "@prismicio/react";
+import { Radio } from "antd";
 
 /**
  * @typedef {import("@prismicio/client").Content.ResponseSlice} ResponseSlice
@@ -7,8 +7,17 @@ import { PrismicRichText } from "@prismicio/react";
  * @param { ResponseProps }
  */
 const Response = ({ slice }) => (
-  <section>
-    <span className="title">
+  <Radio
+    value={slice.primary.value}
+    style={{
+      height: "100%",
+      padding: "0.3rem 1rem",
+      margin: "0.3rem",
+      border: "1px solid #f0f0f0",
+      background: "rgba(45, 56, 60, 0.02)",
+    }}
+  >
+    <span>
       {slice.primary.title ? (
         <PrismicRichText field={slice.primary.title} />
       ) : (
@@ -20,17 +29,7 @@ const Response = ({ slice }) => (
     ) : (
       <p>start by editing this slice from inside Slice Machine!</p>
     )}
-    <style jsx>{`
-      section {
-        max-width: 600px;
-        margin: 4em auto;
-        text-align: center;
-      }
-      .title {
-        color: #8592e0;
-      }
-    `}</style>
-  </section>
+  </Radio>
 );
 
 export default Response;

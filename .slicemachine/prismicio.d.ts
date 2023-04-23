@@ -142,16 +142,6 @@ export type AllDocumentTypes = HomepageDocument | QuestionDocument;
  */
 interface ResponseSliceDefaultPrimary {
   /**
-   * Title field in *Response → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: This is where it all begins...
-   * - **API ID Path**: response.primary.title
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  title: prismicT.TitleField;
-  /**
    * Description field in *Response → Primary*
    *
    * - **Field Type**: Rich Text
@@ -172,6 +162,26 @@ interface ResponseSliceDefaultPrimary {
    *
    */
   isgoodanswer: prismicT.BooleanField;
+  /**
+   * Title field in *Response → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: response.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * value field in *Response → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: response.primary.value
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  value: prismicT.KeyTextField;
 }
 /**
  * Default variation for Response Slice

@@ -11,7 +11,6 @@ export const _Default = () => (
       version: "sktwi1xtmkfgx8626",
       items: [{}],
       primary: {
-        title: [{ type: "heading1", text: "Electric", spans: [] }],
         description: [
           {
             type: "paragraph",
@@ -20,6 +19,14 @@ export const _Default = () => (
           },
         ],
         isgoodanswer: true,
+        title: [
+          {
+            type: "paragraph",
+            text: "Exercitation deserunt irure quis ad ut nisi aliquip.",
+            spans: [],
+          },
+        ],
+        value: "statement",
       },
       id: "_Default",
       slice_type: "response",

@@ -1,42 +1,61 @@
-> Ce projet vient tout juste de commencer et je n'ai pas encore eu le temps de le poursuivre. Il s'agit d'un projet visant à aider El Anis à préparer son brevet. El Anis est un jeune que j'accompagne bénévolement dans le cadre de l'association [Entraide Scolaire Amicale](https://www.entraidescolaireamicale.org/) (ESA). 
+# El Anis App 📚
 
-> L'ESA a pour mission d'accompagner les enfants en difficulté scolaire lorsque leur famille ne peut pas les aider ou les faire aider. L'antenne nantaise accompagne les enfants de l'agglomération nantaise. En tant que bénévole, je suis mentor pour un élève de 3ème que je rencontre une fois par semaine pendant au moins une heure. L'objectif est de mettre l'élève en confiance, de travailler sur ses difficultés et ses lacunes, mais aussi de faire le lien avec les parents et l'école.
+https://img.shields.io/github/last-commit/mariegautron/el-anis-app.svg?style=flat-square
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Un projet développé pour aider El Anis à préparer son brevet, dans le cadre de l'association [Entraide Scolaire Amicale](https://www.entraidescolaireamicale.org/) (ESA). .
 
-## Getting Started
+## Contexte 🌍
 
-First, run the development server:
+L'ESA a pour mission d'accompagner les enfants en difficulté scolaire lorsque leur famille ne peut pas les aider ou les faire aider. L'antenne nantaise accompagne les enfants de l'agglomération nantaise. En tant que bénévole, je suis mentor pour un élève de 3ème que je rencontre une fois par semaine pendant au moins une heure. L'objectif est de mettre l'élève en confiance, de travailler sur ses difficultés et ses lacunes, mais aussi de faire le lien avec les parents et l'école.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Technologies utilisées 🚀
+
+- NextJS 13
+- Prismic Slice Machine
+- Ant Design
+- Firebase (à venir)
+
+## Installation 💻
+
+Clonez ce dépôt de code sur votre machine locale en exécutant la commande suivante dans votre terminal :
+
+`git clone https://github.com/votre_nom/el-anis-app.git`
+
+Accédez au dossier du projet :
+
+`cd el-anis-app`
+
+Installez les dépendances en utilisant la commande suivante :
+
+```
+npm install
+
+ou
+
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lancez le projet en utilisant la commande suivante :
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+ou
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Ouvrez votre navigateur Web et accédez à l'URL suivante : http://localhost:3000.
 
-## Learn More
+Et voilà ! Vous devriez maintenant avoir le projet El Anis App en cours d'exécution sur votre machine locale.
 
-To learn more about Next.js, take a look at the following resources:
+## Fonctionnalités 🎯
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Récupération de questions depuis Prismic
+- Affichage des questions dans des cartes
+- Filtrage des questions par catégorie
+- Affichage de statistiques sur les questions (à venir)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Déploiement 🚀
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Le projet est déployé sur Vercel à l'adresse suivante : [el-anis-app.vercel.app](el-anis-app.vercel.app)

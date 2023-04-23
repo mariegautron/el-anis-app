@@ -1,6 +1,6 @@
-import { Page } from "./utils";
+import { PrismicDocument } from "@prismicio/types";
 
-export type Home = Page & {
+export type Home = PrismicDocument & {
   data: {
     hello: string;
     heading: string;

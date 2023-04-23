@@ -1,9 +1,13 @@
 {
   "slices": {
-    "Question": {}
+    "Response": {
+      "default": {
+        "primary": {}
+      }
+    }
   },
   "_cts": {
     "homepage": {},
-    "quizz": {}
+    "question": {}
   }
 }

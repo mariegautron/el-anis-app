@@ -18,9 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           colorError: "#ff0000",
           colorInfo: "#3455db",
           colorTextBase: "#2d383c",
-          fontSize: 18,
-          sizeStep: 4,
-          sizeUnit: 8,
+
           borderRadius: 16,
         },
       }}

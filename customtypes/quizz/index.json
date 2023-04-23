@@ -1,0 +1,28 @@
+{
+  "id": "quizz",
+  "label": "Quizz",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "text": {
+        "type": "Text",
+        "config": {
+          "label": "text",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "question": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

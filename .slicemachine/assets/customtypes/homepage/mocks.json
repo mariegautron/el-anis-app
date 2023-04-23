@@ -1,0 +1,17 @@
+{
+  "hello": {
+    "__TYPE__": "FieldContent",
+    "value": "essential",
+    "type": "Text"
+  },
+  "heading": {
+    "__TYPE__": "FieldContent",
+    "value": "mysterious",
+    "type": "Text"
+  },
+  "labelbutton": {
+    "__TYPE__": "FieldContent",
+    "value": "plates",
+    "type": "Text"
+  }
+}

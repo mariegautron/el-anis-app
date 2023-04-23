@@ -2,11 +2,11 @@ import React from "react";
 import { PrismicRichText } from "@prismicio/react";
 
 /**
- * @typedef {import("@prismicio/client").Content.QuestionSlice} QuestionSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<QuestionSlice>} QuestionProps
- * @param { QuestionProps }
+ * @typedef {import("@prismicio/client").Content.ResponseSlice} ResponseSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<ResponseSlice>} ResponseProps
+ * @param { ResponseProps }
  */
-const Question = ({ slice }) => (
+const Response = ({ slice }) => (
   <section>
     <span className="title">
       {slice.primary.title ? (
@@ -33,4 +33,4 @@ const Question = ({ slice }) => (
   </section>
 );
 
-export default Question;
+export default Response;

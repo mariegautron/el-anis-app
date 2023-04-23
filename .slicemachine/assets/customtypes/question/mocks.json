@@ -1,0 +1,75 @@
+{
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "town",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Ullamco irure aliqua veniam ullamco nostrud occaecat. Ea incididunt cupidatat aute aute nostrud culpa commodo voluptate laboris tempor occaecat sunt."
+        }
+      }
+    ]
+  },
+  "category": {
+    "__TYPE__": "FieldContent",
+    "value": "maths",
+    "type": "Select"
+  },
+  "points": {
+    "__TYPE__": "FieldContent",
+    "value": "54",
+    "type": "Number"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "response$6d642ec5-1873-4142-8ad1-99ca414cf598",
+        "name": "response",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Spider"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ea proident consectetur deserunt commodo sit nostrud qui ad aliquip eiusmod dolore incididunt cupidatat consectetur voluptate. Lorem esse excepteur deserunt eu labore nulla tempor incididunt cupidatat et velit ipsum. Esse adipisicing est elit commodo consequat exercitation mollit."
+                  }
+                }
+              ]
+            },
+            "isgoodanswer": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

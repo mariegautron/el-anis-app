@@ -1,15 +1,15 @@
 {
-  "id": "question",
+  "id": "response",
   "type": "SharedSlice",
-  "name": "Question",
-  "description": "Question",
+  "name": "Response",
+  "description": "Response",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Question",
+      "description": "Response",
       "primary": {
         "title": {
           "type": "StructuredText",
@@ -27,39 +27,6 @@
             "placeholder": "A nice description of your feature"
           }
         },
-        "category": {
-          "type": "Select",
-          "config": {
-            "label": "category",
-            "placeholder": "",
-            "options": ["1", "2"]
-          }
-        },
-        "points": {
-          "type": "Number",
-          "config": {
-            "label": "points",
-            "placeholder": ""
-          }
-        }
-      },
-      "items": {
-        "reponsetitle": {
-          "type": "Text",
-          "config": {
-            "label": "reponseTitle",
-            "placeholder": ""
-          }
-        },
-        "responsedescription": {
-          "type": "StructuredText",
-          "config": {
-            "label": "responseDescription",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
         "isgoodanswer": {
           "type": "Boolean",
           "config": {
@@ -70,6 +37,7 @@
           }
         }
       },
+      "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

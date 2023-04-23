@@ -1,9 +1,9 @@
 {
   "slices": {
-    "Question": {}
+    "Response": {}
   },
   "_cts": {
     "homepage": {},
-    "quizz": {}
+    "question": {}
   }
 }

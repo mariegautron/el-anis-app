@@ -32,10 +32,7 @@
           "config": {
             "label": "category",
             "placeholder": "",
-            "options": [
-              "1",
-              "2"
-            ]
+            "options": ["1", "2"]
           }
         },
         "points": {

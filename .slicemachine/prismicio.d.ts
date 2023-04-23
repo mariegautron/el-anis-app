@@ -4,43 +4,43 @@ import type * as prismicT from "@prismicio/types";
 import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = {
-    [KeyType in keyof T]: T[KeyType];
+  [KeyType in keyof T]: T[KeyType];
 };
 /** Content for HomePage documents */
 interface HomepageDocumentData {
-    /**
-     * hello field in *HomePage*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.hello
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    hello: prismicT.KeyTextField;
-    /**
-     * heading field in *HomePage*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.heading
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    heading: prismicT.KeyTextField;
-    /**
-     * labelButton field in *HomePage*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.labelbutton
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    labelbutton: prismicT.KeyTextField;
+  /**
+   * hello field in *HomePage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.hello
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  hello: prismicT.KeyTextField;
+  /**
+   * heading field in *HomePage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismicT.KeyTextField;
+  /**
+   * labelButton field in *HomePage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.labelbutton
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  labelbutton: prismicT.KeyTextField;
 }
 /**
  * HomePage document from Prismic
@@ -51,31 +51,36 @@ interface HomepageDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+export type HomepageDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithoutUID<
+    Simplify<HomepageDocumentData>,
+    "homepage",
+    Lang
+  >;
 /** Content for Quizz documents */
 interface QuizzDocumentData {
-    /**
-     * text field in *Quizz*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: quizz.text
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    text: prismicT.KeyTextField;
-    /**
-     * Slice Zone field in *Quizz*
-     *
-     * - **Field Type**: Slice Zone
-     * - **Placeholder**: *None*
-     * - **API ID Path**: quizz.slices[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
-     *
-     */
-    slices: prismicT.SliceZone<QuizzDocumentDataSlicesSlice>;
+  /**
+   * text field in *Quizz*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quizz.text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text: prismicT.KeyTextField;
+  /**
+   * Slice Zone field in *Quizz*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quizz.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<QuizzDocumentDataSlicesSlice>;
 }
 /**
  * Slice for *Quizz → Slice Zone*
@@ -91,90 +96,95 @@ type QuizzDocumentDataSlicesSlice = QuestionSlice;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type QuizzDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<QuizzDocumentData>, "quizz", Lang>;
+export type QuizzDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithoutUID<
+    Simplify<QuizzDocumentData>,
+    "quizz",
+    Lang
+  >;
 export type AllDocumentTypes = HomepageDocument | QuizzDocument;
 /**
  * Primary content in Question → Primary
  *
  */
 interface QuestionSliceDefaultPrimary {
-    /**
-     * Title field in *Question → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: question.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *Question → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: question.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
-     * category field in *Question → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: *None*
-     * - **API ID Path**: question.primary.category
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    category: prismicT.SelectField<"1" | "2">;
-    /**
-     * points field in *Question → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: *None*
-     * - **API ID Path**: question.primary.points
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    points: prismicT.NumberField;
+  /**
+   * Title field in *Question → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: This is where it all begins...
+   * - **API ID Path**: question.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.TitleField;
+  /**
+   * Description field in *Question → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: A nice description of your feature
+   * - **API ID Path**: question.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+  /**
+   * category field in *Question → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: question.primary.category
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  category: prismicT.SelectField<"1" | "2">;
+  /**
+   * points field in *Question → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: question.primary.points
+   * - **Documentation**: https://prismic.io/docs/core-concepts/number
+   *
+   */
+  points: prismicT.NumberField;
 }
 /**
  * Item in Question → Items
  *
  */
 export interface QuestionSliceDefaultItem {
-    /**
-     * reponseTitle field in *Question → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: question.items[].reponsetitle
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    reponsetitle: prismicT.KeyTextField;
-    /**
-     * responseDescription field in *Question → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: question.items[].responsedescription
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    responsedescription: prismicT.RichTextField;
-    /**
-     * isGoodAnswer field in *Question → Items*
-     *
-     * - **Field Type**: Boolean
-     * - **Placeholder**: *None*
-     * - **Default Value**: false
-     * - **API ID Path**: question.items[].isgoodanswer
-     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
-     *
-     */
-    isgoodanswer: prismicT.BooleanField;
+  /**
+   * reponseTitle field in *Question → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: question.items[].reponsetitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  reponsetitle: prismicT.KeyTextField;
+  /**
+   * responseDescription field in *Question → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: question.items[].responsedescription
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  responsedescription: prismicT.RichTextField;
+  /**
+   * isGoodAnswer field in *Question → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: question.items[].isgoodanswer
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  isgoodanswer: prismicT.BooleanField;
 }
 /**
  * Default variation for Question Slice
@@ -184,7 +194,11 @@ export interface QuestionSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type QuestionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<QuestionSliceDefaultPrimary>, Simplify<QuestionSliceDefaultItem>>;
+export type QuestionSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<QuestionSliceDefaultPrimary>,
+  Simplify<QuestionSliceDefaultItem>
+>;
 /**
  * Slice variation for *Question*
  *
@@ -198,12 +212,30 @@ type QuestionSliceVariation = QuestionSliceDefault;
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type QuestionSlice = prismicT.SharedSlice<"question", QuestionSliceVariation>;
+export type QuestionSlice = prismicT.SharedSlice<
+  "question",
+  QuestionSliceVariation
+>;
 declare module "@prismicio/client" {
-    interface CreateClient {
-        (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
-    }
-    namespace Content {
-        export type { HomepageDocumentData, HomepageDocument, QuizzDocumentData, QuizzDocumentDataSlicesSlice, QuizzDocument, AllDocumentTypes, QuestionSliceDefaultPrimary, QuestionSliceDefaultItem, QuestionSliceDefault, QuestionSliceVariation, QuestionSlice };
-    }
+  interface CreateClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options?: prismic.ClientConfig
+    ): prismic.Client<AllDocumentTypes>;
+  }
+  namespace Content {
+    export type {
+      HomepageDocumentData,
+      HomepageDocument,
+      QuizzDocumentData,
+      QuizzDocumentDataSlicesSlice,
+      QuizzDocument,
+      AllDocumentTypes,
+      QuestionSliceDefaultPrimary,
+      QuestionSliceDefaultItem,
+      QuestionSliceDefault,
+      QuestionSliceVariation,
+      QuestionSlice,
+    };
+  }
 }

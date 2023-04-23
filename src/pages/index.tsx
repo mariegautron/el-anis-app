@@ -4,6 +4,7 @@ const { Title } = Typography;
 import { Card } from "antd";
 import { createClient } from "../../prismicio";
 import { Home } from "@/types/home";
+import * as prismicNext from "@prismicio/next";
 
 const cardStyle: CSSProperties = {
   width: 600,
@@ -47,12 +48,12 @@ const Home: React.FC<HomeProps> = ({ page }) => {
   );
 };
 
-export async function getStaticProps({ previewData }: any) {
+export async function getStaticProps({
+  previewData,
+}: prismicNext.CreateClientConfig) {
   const client = createClient({ previewData });
 
   const page = await client.getSingle("homepage");
-
-  console.log("page: " + page);
 
   return {
     props: {

@@ -39,7 +39,5 @@ export const createClient = (config = {}) => {
     accessToken: sm.accessToken,
   });
 
-  console.log("client", client);
-
   return client;
 };

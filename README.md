@@ -19,7 +19,7 @@ L'ESA a pour mission d'accompagner les enfants en difficulté scolaire lorsque l
 
 Clonez ce dépôt de code sur votre machine locale en exécutant la commande suivante dans votre terminal :
 
-`git clone https://github.com/votre_nom/el-anis-app.git`
+`git clone https://github.com/mariegautron/el-anis-app.git`
 
 Accédez au dossier du projet :
 

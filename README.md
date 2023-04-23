@@ -1,7 +1,6 @@
 # El Anis App 📚
 
-https://img.shields.io/github/last-commit/mariegautron/el-anis-app.svg?style=flat-square
-
+<p align="center"><img src="https://img.shields.io/github/last-commit/mariegautron/el-anis-app.svg?style=flat-square" alt="shields"></p>
 Un projet développé pour aider El Anis à préparer son brevet, dans le cadre de l'association [Entraide Scolaire Amicale](https://www.entraidescolaireamicale.org/) (ESA). .
 
 ## Contexte 🌍

@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
   UserOutlined,
-  VideoCameraOutlined,
-} from '@ant-design/icons';
-import { Layout, Menu, Button, theme } from 'antd';
+} from "@ant-design/icons";
+import { Button, Layout, Menu, theme } from "antd";
+import React, { useState } from "react";
 
 const { Header, Sider, Content } = Layout;
 
 interface CustomLayoutProps {
   children: React.ReactNode[];
 }
-
 
 const CustomLayout: React.FC<CustomLayoutProps> = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -28,12 +25,12 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({ children }) => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={['1']}
+          defaultSelectedKeys={["1"]}
           items={[
             {
-              key: '1',
+              key: "1",
               icon: <UserOutlined />,
-              label: 'Exercices du jour',
+              label: "Exercices du jour",
             },
             // {
             //   key: '2',
@@ -55,7 +52,7 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({ children }) => {
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
             style={{
-              fontSize: '16px',
+              fontSize: "16px",
               width: 64,
               height: 64,
             }}
@@ -63,14 +60,14 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({ children }) => {
         </Header>
         <Content
           style={{
-            margin: '24px 16px',
+            margin: "24px 16px",
             padding: 24,
             background: colorBgContainer,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '100vh'
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: "100vh",
           }}
         >
           {children}
